@@ -7,3 +7,14 @@
 	<stdio.h>
 	<stdlib.h>
 
+1569595893 source:d:\molinai\laboratorio1\estacionamiento\bibliofecha.c
+	"biblioFecha.h"
+
+1569595894 d:\molinai\laboratorio1\estacionamiento\bibliofecha.h
+
+1569597412 source:d:\molinai\laboratorio1\estacionamiento\bibliopersona.c
+	"biblioPersona.h"
+
+1569597320 d:\molinai\laboratorio1\estacionamiento\bibliopersona.h
+	"biblioFecha.h"
+

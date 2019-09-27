@@ -31,6 +31,18 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="biblioFecha.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="biblioFecha.h" />
+		<Unit filename="biblioPersona.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="biblioPersona.h" />
+		<Unit filename="biblioVehiculo.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="biblioVehiculo.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
