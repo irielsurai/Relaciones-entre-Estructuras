@@ -36,7 +36,7 @@ typedef struct
 void hardcodearPersona (ePersona[], int);
 void mostrarPersona (ePersona[], int);
 void hardcodearVehiculos (eVehiculo[], int);
-void mostrarVehiculo (ePersona[], int);
+void mostrarVehiculo (eVehiculo[], int);
 
 // MAIN
 int main()
@@ -83,9 +83,9 @@ void mostrarPersona (ePersona semuestranPersonas [], int cantidad)
     for (i=0; i<cantidad; i++)
     {
         printf ("\n El nombre es: %s ", semuestranPersonas[i].nombre);
-        printf (" \t Dia: %d ", semuestranPersonas[i].fechaNac.dia);
-        printf (" \t Mes: %d ", semuestranPersonas[i].fechaNac.mes);
-        printf ("\t Anio: %d \n\n", semuestranPersonas[i].fechaNac.anio);
+        printf (" \t Dia: %02d ", semuestranPersonas[i].fechaNac.dia);
+        printf (" \t Mes: %02d ", semuestranPersonas[i].fechaNac.mes);
+        printf ("\t Anio: %04d \n\n", semuestranPersonas[i].fechaNac.anio);
     }
 }
 
@@ -120,14 +120,14 @@ void mostrarVehiculo (eVehiculo semuestranVehiculos [], int cantidad)
     int i;
     for (i=0; i<cantidad; i++)
     {
-        printf (" \n \t El vehiculo patente: %d ", semuestranVehiculos[i].patente);
+        printf (" \n  El vehiculo: %d ", semuestranVehiculos[i].patente);
 
-        printf (" \t Ingreso el dia: %d ", semuestranVehiculos[i].fechaIngreso.dia);
-        printf (" \t Mes: %d ", semuestranVehiculos[i].fechaIngreso.mes);
-        printf ("\t Anio: %d \n", semuestranVehiculos[i].fechaIngreso.anio);
+        printf (" \Ingreso: %02d/%02d/%04d ",    semuestranVehiculos[i].fechaIngreso.dia,
+                                                    semuestranVehiculos[i].fechaIngreso.mes,
+                                                    semuestranVehiculos[i].fechaIngreso.anio);
 
-        printf ("\t A las: %d ", semuestranVehiculos[i].horaIngreso);
-        printf ("\t y se retiro a las: %d \n\n", semuestranVehiculos[i].horaSalida);
+        printf ("\t Desde las: %02d ", semuestranVehiculos[i].horaIngreso);
+        printf (" Hasta a las: %02d \n\n", semuestranVehiculos[i].horaSalida);
 
         //printf ("\n Le duenie del vehiculo es: %s ", semuestranVehiculos[i].nombre);
     }
