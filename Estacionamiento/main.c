@@ -36,7 +36,7 @@ typedef struct
 void hardcodearPersona (ePersona[], int);
 void mostrarPersona (ePersona[], int);
 void hardcodearVehiculos (eVehiculo[], int);
-void mostrarVehiculo (eVehiculo[], int);
+void mostrarVehiculo (eVehiculo[], ePersona[], int);
 
 // MAIN
 int main()
@@ -48,7 +48,7 @@ int main()
     hardcodearPersona (persona, CANT);
     mostrarPersona (persona, CANT);
     hardcodearVehiculos (vehiculos, 4);
-    mostrarVehiculo (vehiculos, 4);
+    mostrarVehiculo (vehiculos, persona, 4);
 
     printf("\n\t Hello world!\n");
     return 0;
@@ -115,7 +115,7 @@ void hardcodearVehiculos (eVehiculo estosVehiculos [], int cantidad)
     }
 }
 
-void mostrarVehiculo (eVehiculo semuestranVehiculos [], int cantidad)
+void mostrarVehiculo (eVehiculo semuestranVehiculos [], ePersona estasPersonas[], int cantidad)
 {
     int i;
     for (i=0; i<cantidad; i++)
@@ -128,6 +128,15 @@ void mostrarVehiculo (eVehiculo semuestranVehiculos [], int cantidad)
 
         printf ("\t Desde las: %02d ", semuestranVehiculos[i].horaIngreso);
         printf (" Hasta a las: %02d \n\n", semuestranVehiculos[i].horaSalida);
+        int j;
+        for (j=0;j<CANT;j++)
+        {
+            if(semuestranVehiculos[i].idDuenio == estasPersonas[j].id)
+            {
+                printf ("Duenio: %s\n",estasPersonas[j].nombre);
+                break;
+            }
+        }
 
         //printf ("\n Le duenie del vehiculo es: %s ", semuestranVehiculos[i].nombre);
     }
